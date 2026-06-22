@@ -320,7 +320,28 @@ h1,h2,h3{
     cursor:pointer;
     font-weight:600;
 }
+.founder{
+    padding:100px 8%;
+    text-align:center;
+}
 
+.founder-content{
+    max-width:800px;
+    margin:auto;
+    background:#1e293b;
+    padding:40px;
+    border-radius:20px;
+}
+
+.founder h2{
+    margin-bottom:20px;
+    color:#3b82f6;
+}
+
+.founder p{
+    margin-bottom:15px;
+    color:#cbd5e1;
+}
 /* Footer */
 
 footer{

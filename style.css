@@ -407,3 +407,126 @@ footer p{
         text-align:center;
     }
 }
+/* =============================================
+   Recent Local Business Sites — card animations
+   Add this to your existing style.css
+   ============================================= */
+
+.project-card {
+  background: #1e293b; /* slate-800 */
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.6s ease forwards;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  border: 1px solid transparent;
+}
+
+/* stagger the entrance so cards don't all pop in at once */
+.project-card:nth-child(1) { animation-delay: 0.05s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.35s; }
+.project-card:nth-child(4) { animation-delay: 0.5s; }
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* hover lift + glow */
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.25); /* soft blue glow */
+  border-color: rgba(59, 130, 246, 0.4);
+}
+
+.project-card h4 {
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.project-card p {
+  color: #cbd5e1; /* slate-300 */
+  margin: 0.5rem 0 1rem;
+}
+
+.project-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
+.project-card ul li {
+  padding: 2px 0;
+}
+
+/* "New" badge with a soft pulse so it draws the eye without being annoying */
+.badge-new {
+  background: #f97316; /* orange-500 */
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  display: inline-block;
+  animation: pulseBadge 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.5); }
+  50% { box-shadow: 0 0 0 6px rgba(249, 115, 22, 0); }
+}
+
+/* View Demo button */
+.view-demo-btn {
+  display: block;
+  text-align: center;
+  background: #2563eb; /* blue-600 */
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.6rem 0;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.view-demo-btn:hover {
+  background: #1d4ed8; /* blue-700 */
+  transform: scale(1.02);
+}
+
+/* section heading */
+.section-subheading {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1rem 0 1.5rem;
+}
+
+/* card grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

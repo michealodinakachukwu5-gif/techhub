@@ -530,3 +530,88 @@ footer p{
     grid-template-columns: repeat(3, 1fr);
   }
 }
+/* =============================================
+   Contact form styling — add to your style.css
+   Matches the dark navy / blue-accent theme
+   ============================================= */
+
+.contact-form {
+  max-width: 480px;
+  margin: 2rem auto 0;
+  background: #1e293b; /* slate-800, matches your project cards */
+  border-radius: 0.75rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border: 1px solid rgba(59, 130, 246, 0.15);
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-row label {
+  color: #cbd5e1; /* slate-300 */
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.form-row input,
+.form-row textarea {
+  background: #0f172a; /* slate-900, darker than the card for contrast */
+  border: 1px solid #334155; /* slate-700 */
+  color: #f1f5f9;
+  padding: 0.7rem 0.9rem;
+  border-radius: 0.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-row input::placeholder,
+.form-row textarea::placeholder {
+  color: #64748b; /* slate-500 */
+}
+
+.form-row input:focus,
+.form-row textarea:focus {
+  outline: none;
+  border-color: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-row textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+.form-submit-btn {
+  margin-top: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.form-status {
+  text-align: center;
+  font-size: 0.9rem;
+  min-height: 1.2rem;
+  margin: 0;
+}
+
+.form-status-success {
+  color: #4ade80; /* green-400 */
+}
+
+.form-status-error {
+  color: #f87171; /* red-400 */
+}
